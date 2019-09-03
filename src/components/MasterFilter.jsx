@@ -71,7 +71,11 @@ const MasterFilter = props => {
           </ul>
         </div>
         <div className="modal-footer">
-          <a href="#modal-new" className="waves-effect waves-green btn-flat">
+          <a
+            href="#modal-new"
+            // need to figure out how to trigger modal from this modal...or change UI/UX to something else
+            className="waves-effect waves-green btn-flat modal-trigger"
+          >
             Add New Filter
           </a>
           <a
@@ -80,46 +84,6 @@ const MasterFilter = props => {
           >
             Save
           </a>
-          {/* View New Master Filter Modal */}
-          {/* turn into a component, need to figure out how to open component modal */}
-          <div id="modal-new" className="modal modal-fixed-footer">
-            <div className="modal-content">
-              <div className="row">
-                <div className="col l7 filter-info">
-                  <div className="input-field">
-                    <input
-                      id="filter_name"
-                      type="text"
-                      className="validate"
-                      placeholder="Filter Name"
-                    />
-                    <label htmlFor="filter_name">Filter Name</label>
-                  </div>
-                  <div className="input-field">
-                    <input
-                      id="filter_value"
-                      type="text"
-                      className="validate"
-                      placeholder="Filter Value"
-                    />
-                    <label htmlFor="filter_value">Filter Value</label>
-                  </div>
-                </div>
-              </div>
-              <p>Add code here</p>
-            </div>
-            <div className="modal-footer">
-              <a href="#!" className="waves-effect waves-green btn-flat">
-                Add New Filter
-              </a>
-              <a
-                href="#!"
-                className="modal-close waves-effect waves-green btn-flat"
-              >
-                Save
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </>
