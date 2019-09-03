@@ -14,6 +14,7 @@ body {
 .card-content {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.87);
+  /* height: 155px; */
 }
 
 .filter-count {
