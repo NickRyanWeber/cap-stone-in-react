@@ -5,10 +5,8 @@ import M from 'materialize-css'
 import MasterFilter from '../components/MasterFilter'
 
 const MainApp = () => {
-  // const elems = ReactDOM.findDOMNode(this).querySelectorAll('.sidenav')
-  // need this for the M.AutoInit() below to get sidenav working. Check bottom of NavBar page on materialize website
-
   useEffect(() => {
+    // let navbar = document.querySelectorAll('.nav-wrapper')
     M.AutoInit()
   }, [])
 
@@ -48,7 +46,7 @@ const MainApp = () => {
       {
         id: '5',
         gaAccountSelector: 'dummydata',
-        gaPropertySelector: '',
+        gaPropertySelector: 'dummydata',
         gaViewSelector: 'dummydata',
         gaFilterSelector: 'dummydata'
       }
@@ -57,12 +55,12 @@ const MainApp = () => {
 
   return (
     <>
-      <nav class="nav-wrapper">
+      <nav className="nav-wrapper">
         <section className="container">
-          <a href="/app" class="brand-logo">
+          <a href="/app" className="brand-logo">
             Filter Master
           </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <a href="/">Logout</a>
             </li>
@@ -70,16 +68,13 @@ const MainApp = () => {
         </section>
       </nav>
       <main className="container">
-        <h1>Main App Page</h1>
         <section className="row">
-          <section className="col s12 m6 l4">
-            <MasterFilter data={test} />
-            <MasterFilter data={test} />
-            <MasterFilter data={test} />
-            <MasterFilter data={test} />
-            <MasterFilter data={test} />
-            <MasterFilter data={test} />
-          </section>
+          <MasterFilter data={test} />
+          <MasterFilter data={test} />
+          <MasterFilter data={test} />
+          <MasterFilter data={test} />
+          <MasterFilter data={test} />
+          <MasterFilter data={test} />
         </section>
       </main>
     </>
