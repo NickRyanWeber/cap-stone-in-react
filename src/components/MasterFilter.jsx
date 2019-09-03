@@ -73,7 +73,8 @@ const MasterFilter = props => {
         <div className="modal-footer">
           <a
             href="#modal-new"
-            // need to figure out how to trigger modal from this modal...or change UI/UX to something else
+            // need to figure out how to trigger modal from this modal. Or change UI/UX to something else
+            // somehow this is triggering my new modal from the MainApp.jsx file
             className="waves-effect waves-green btn-flat modal-trigger"
           >
             Add New Filter
