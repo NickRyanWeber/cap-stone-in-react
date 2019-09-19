@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import M from 'materialize-css'
+import NewFilter from './NewFilter'
 
 const MasterFilter = props => {
   useEffect(() => {
@@ -13,9 +14,14 @@ const MasterFilter = props => {
         <section className="card">
           <a href={`#modal${props.data.id}`} className="modal-trigger">
             <section className="card-content">
-              <h6 className="truncate">{props.data.masterFilterTitle}</h6>
-              <p>Value - {props.data.filterValue}</p>
-              <p>{props.data.gaFilters.length} filters</p>
+              <div className="section">
+                <h6 className="truncate">{props.data.masterFilterTitle}</h6>
+                <div className="divider"></div>
+              </div>
+              <div className="section">
+                <p>Value - {props.data.filterValue}</p>
+                <p>{props.data.gaFilters.length} filters</p>
+              </div>
             </section>
           </a>
         </section>
@@ -72,9 +78,7 @@ const MasterFilter = props => {
         </div>
         <div className="modal-footer">
           <a
-            href="#modal-new"
-            // need to figure out how to trigger modal from this modal. Or change UI/UX to something else
-            // somehow this is triggering my new modal from the MainApp.jsx file
+            href="#modal-new-filter"
             className="waves-effect waves-green btn-flat modal-trigger"
           >
             Add New Filter
@@ -86,6 +90,12 @@ const MasterFilter = props => {
             Save
           </a>
         </div>
+      </div>
+      <div
+        id="modal-new-filter"
+        className="modal modal-fixed-footer new-filter-modal"
+      >
+        <NewFilter />
       </div>
     </>
   )

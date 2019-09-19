@@ -20,3 +20,10 @@ body {
 .filter-count {
   border: 1px solid rgba(0, 0, 0, 0.87);
 }
+
+/* This isn't being applied */
+/* .new-filter-modal {
+  height: 60%;
+  width: 60%;
+  top: 15%;
+} */

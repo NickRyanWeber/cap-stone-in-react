@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TestModal = () => {
+const NewMasterFilter = () => {
   return (
     <>
       <div className="modal-content">
@@ -37,4 +37,4 @@ const TestModal = () => {
   )
 }
 
-export default TestModal
+export default NewMasterFilter

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import M from 'materialize-css'
 import MasterFilter from '../components/MasterFilter'
-import TestModal from './TestModal'
+import NewMasterFilter from '../components/NewMasterFilter'
 
 const MainApp = () => {
   useEffect(() => {
@@ -215,6 +215,10 @@ const MainApp = () => {
     }
   ]
 
+  const addMasterFilter = () => {
+    console.log('FAB Clicked')
+  }
+
   return (
     <>
       <nav className="nav-wrapper">
@@ -229,7 +233,8 @@ const MainApp = () => {
           </ul>
         </section>
       </nav>
-      <main className="container">
+      {/* <main className="container"> */}
+      <main className="">
         <section className="row">
           {masterFiltersArray.map((masterFilterData, i) => {
             return <MasterFilter key={i} data={masterFilterData} />
@@ -240,47 +245,16 @@ const MainApp = () => {
         <a
           href="#modal-new-master-filter"
           className="btn-floating btn-large waves-effect waves-circle waves-light red modal-trigger"
+          onClick={() => {
+            console.log('FAB click')
+            addMasterFilter()
+          }}
         >
-          <i class="large material-icons">add</i>
+          <i className="large material-icons">add</i>
         </a>
       </div>
-      {/* View Master Filter Modal */}
-      {/* turn into a component, need to figure out how to open component modal */}
       <div id="modal-new-master-filter" className="modal modal-fixed-footer">
-        <TestModal />
-        {/* <div className="modal-content">
-          <div className="row">
-            <div className="col l7 filter-info">
-              <div className="input-field">
-                <input
-                  id="filter_name"
-                  type="text"
-                  className="validate"
-                  placeholder="Filter Name"
-                />
-                <label htmlFor="filter_name">Filter Name</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="filter_value"
-                  type="text"
-                  className="validate"
-                  placeholder="Filter Value"
-                />
-                <label htmlFor="filter_value">Filter Value</label>
-              </div>
-            </div>
-          </div>
-          <p>Add code here</p>
-        </div>
-        <div className="modal-footer">
-          <a
-            href="#!"
-            className="modal-close waves-effect waves-green btn-flat"
-          >
-            Save
-          </a>
-        </div> */}
+        <NewMasterFilter />
       </div>
     </>
   )
